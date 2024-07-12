@@ -18,7 +18,7 @@ void setup(){
 void draw(){
  background(255);
  stroke(0);
- line(0,0,width,height);
+ line(0,height,0,width);
  for(Point pt : points){
   pt.show();
  }

@@ -4,8 +4,8 @@ class Point{
  int label;
  
  Point() {
-  x = random(width);
-  y = random(height);
+  x = random(-1,1);
+  y = random(-1,1);
   
   if(x > y){
    label = 1;
@@ -20,6 +20,9 @@ class Point{
   }else{
    fill(0);
   }
-  ellipse(x,y,32,32);
+  
+  float px = map(x,-1,1,0,width);
+  float py = map(y,-1,1,height,0);
+  ellipse(px,py,32,32);
  }
 }
